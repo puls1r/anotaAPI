@@ -30,5 +30,6 @@ Route::delete('/karyawan/delete/{idKaryawan}','KaryawanController@destroy'); //d
     Route::post('/karyawan/assign/{idKaryawan}','KaryawanController@assign');
 
  //pembayaran   
+Route::get('/keuangan', 'KeuanganController@index');
 Route::post('/keuangan/bayar/{idAccounting}','KeuanganController@updatepembayaran');
 
