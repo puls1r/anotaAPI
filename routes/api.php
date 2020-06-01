@@ -27,7 +27,7 @@ Route::post('/karyawan','KaryawanController@create'); //create karyawan
 Route::delete('/karyawan/delete/{idKaryawan}','KaryawanController@destroy'); //delete karyawan
 
     //assign Karyawan ke orderan
-    Route::post('/karyawan/assign/{idKaryawan}','ProgressKaryawanController@assign');
+    Route::post('/karyawan/assign/{idKaryawan}','KaryawanController@assign');
 
  //pembayaran   
 Route::post('/keuangan/bayar/{idAccounting}','KeuanganController@updatepembayaran');
