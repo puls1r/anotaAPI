@@ -21,13 +21,13 @@ Route::delete('/order/{id}', 'OrderController@delete');
 
 Route::get('/jenisOrder', 'JenisOrderController@index');
 
-Route::get('/karyawan','Karyawan\KaryawanController@index');
-Route::get('/karyawan/{id}','Karyawan\KaryawanController@show'); //karyawan detail
-Route::post('/karyawan','Karyawan\KaryawanController@store'); //create karyawan
-Route::delete('/karyawan/delete/{idKaryawan}','Karyawan\KaryawanController@destroy'); //delete karyawan
+Route::get('/karyawan','KaryawanController@index');
+Route::get('/karyawan/{id}','KaryawanController@show'); //karyawan detail
+Route::post('/karyawan','KaryawanController@create'); //create karyawan
+Route::delete('/karyawan/delete/{idKaryawan}','KaryawanController@destroy'); //delete karyawan
 
     //assign Karyawan ke orderan
-    Route::post('/karyawan/assign/{idKaryawan}','Karyawan\ProgressKaryawanController@assign');
+    Route::post('/karyawan/assign/{idKaryawan}','ProgressKaryawanController@assign');
 
  //pembayaran   
 Route::post('/keuangan/bayar/{idAccounting}','KeuanganController@updatepembayaran');
