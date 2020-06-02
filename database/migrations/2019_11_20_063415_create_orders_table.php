@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('jenisOrder')->references('jenisOrder')->on('jenis_orders');
             $table->date('deadlineOrder');
             $table->integer('progressOrder');
-            $table->integer('karyawanPekerjaOrder');
+            $table->integer('karyawanPekerjaOrder')->nullable();
             $table->timestamps();
         });
     }
