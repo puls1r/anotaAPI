@@ -24,7 +24,7 @@ Route::get('/jenisOrder', 'JenisOrderController@index');
 Route::get('/karyawan','KaryawanController@index');
 Route::get('/karyawan/{id}','KaryawanController@show'); //karyawan detail
 Route::post('/karyawan','KaryawanController@create'); //create karyawan
-Route::delete('/karyawan/delete/{idKaryawan}','KaryawanController@destroy'); //delete karyawan
+Route::delete('/karyawan/{idKaryawan}','KaryawanController@delete'); //delete karyawan
 
     //assign Karyawan ke orderan
     Route::post('/karyawan/assign/{idKaryawan}','KaryawanController@assign');

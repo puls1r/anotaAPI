@@ -68,8 +68,18 @@ class KaryawanController extends Controller
         $order->save();
 
         return response()->json("OK", 200);
+    }
 
-
-
+    public function delete($idKaryawan){
+        $karyawan = Karyawan::where('idKaryawan', '=', $idKaryawan);
+        $karyawan->delete();
+        $progressKaryawan = ProgressKaryawan::where('idKaryawan', '=', $idKaryawan);
+        if($progressKaryawan === NULL){
+            return response()->json('Deleted');
+        }
+        else{
+        $progressKaryawan->delete();
+        return response()->json('Deleted');
+        }
     }
 }
