@@ -16,7 +16,6 @@ class CreateNotasTable extends Migration
         Schema::create('notas', function (Blueprint $table) {
             $table->bigIncrements('idNota');
             $table->bigInteger('idOrder')->unsigned();
-            $table->foreign('idOrder')->references('idOrder')->on('orders');
             $table->string('namaNota');
             $table->string('url');
             $table->timestamps();

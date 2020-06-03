@@ -16,7 +16,6 @@ class CreateKaryawansTable extends Migration
         Schema::create('karyawans', function (Blueprint $table) {
             $table->bigIncrements('idKaryawan');                                          
             $table->bigInteger('idOrder')->unsigned();
-            $table->foreign('idOrder')->references('idOrder')->on('orders');
             $table->string('namaKaryawan');
             $table->string('emailKaryawan');
             //$table->string('photoKaryawan');

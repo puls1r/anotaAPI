@@ -15,8 +15,7 @@ class AddNullableToKaryawanPekerjaOrderFromOrders extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             $table->bigInteger('karyawanPekerjaOrder')->unsigned()->nullable()->change();
-            $table->foreign('karyawanPekerjaOrder')->references('idKaryawan')->on('karyawans');
-        });
+           });
     }
 
     /**

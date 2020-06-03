@@ -14,7 +14,6 @@ class RemoveIdOrderFromKaryawans extends Migration
     public function up()
     {
         Schema::table('karyawans', function (Blueprint $table) {
-            $table->dropForeign('karyawans_idOrder_foreign');
             $table->dropColumn('idOrder');
         });
     }
